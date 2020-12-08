@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+  <title>To do list</title>
+</head>
+
+<body class="page-body">
+  <section class="menu">
+    <span class="menu-decor"></span>
+    <ul class="menu__list visually-hidden">
+      <li class="menu__item">
+        <a class="rules">
+          <span class="visually-hidden">Как пользоваться To do List</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="tasks">
+    <h2 class="tasks__title">To do list</h2>
+    <div class="tasks__wrapper">
+      <ul class="tasks__list">
+        <li class="tasks__item">
+          <span class="item-number">1</span>
+          <input class="item-input" type="text" placeholder="готовка ужина">
+          <button type="button" class="button item__delete" area-label="Удалить пункт">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon
+                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item">
+          <span class="item-number">2</span>
+          <input class="item-input" type="text" placeholder="доделать задание на js">
+          <button type="button" class="button item__delete" area-label="Удалить пункт">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon
+                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item">
+          <span class="item-number">3</span>
+          <input class="item-input" type="text" placeholder="прогука с собакой">
+          <button type="button" class="button item__delete" area-label="Удалить пункт">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon
+                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item">
+          <span class="item-number">4</span>
+          <input class="item-input" type="text" placeholder="готовка ужина">
+          <button type="button" class="button item__delete" area-label="Удалить пункт">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon
+                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item">
+          <span class="item-number">5</span>
+          <input class="item-input" type="text" placeholder="готовка ужина">
+          <button type="button" class="button item__delete" area-label="Удалить пункт">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
+              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon
+                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <div class="controls-wrapper">
+        <button type="button" class="button buttons__add">Добавить пункт</button>
+        <button type="button" class="button buttons__clear-all">Очистить весь список</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item github-link">
+        <a href="https://github.com/VoronNess/TodoList" aria-label=" Репозиторий проекта">
+
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <template id="task">
+    <span class="item-number"></span>
+    <input type="text" placeholder="доделать задание на js">
+    <button type="button" class="item__delete" area-label="Удалить пункт"></button>
+  </template>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

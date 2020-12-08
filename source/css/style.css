@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Sans"), local("PTSans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: local("PTSans-Bold"), local("PT Sans Bold"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+}
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+}
+.item-number {
+  font-size: 15px;
+  height: 30px;
+  width: 30px;
+  left: 15px;
+  z-index: 2;
+  border-radius: 50%;
+  position: absolute;
+  color: #686868;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+}
+.menu {
+  position: relative;
+}
+.menu-decor {
+  width: 40px;
+  height: 60px;
+  background-color: #0077b3;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: 2;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.page {
+  line-height: 25px;
+  color: #686868;
+  background-color: #ffffff;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.tasks {
+  position: relative;
+  background-color: white;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tasks::after {
+  content: "";
+  position: absolute;
+  background-color: #686868;
+  height: 1px;
+  width: 280px;
+  bottom: 110px;
+  left: 20px;
+}
+.tasks__wrapper {
+  margin: auto;
+}
+.tasks__list {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tasks__item {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: move;
+  background-color: none;
+}
+.tasks__title {
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.tasks__title::after {
+  content: "";
+  position: absolute;
+  background-color: #686868;
+  height: 1px;
+  width: 280px;
+  top: 50px;
+  left: 10px;
+}
+.controls-wrapper {
+  background-color: inherit;
+  position: relative;
+  margin-top: 40px;
+}
+.controls-wrapper .button {
+  background-color: inherit;
+  border: none;
+  font-family: "PT Sans", "Verdana", sans-serif;
+  font-size: 15px;
+}
+.item-input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+  margin-left: 30px;
+  border: none;
+  border-bottom: 1px dotted #686868;
+}
+.item__delete {
+  background-color: inherit;
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+.item__delete svg polygon {
+  fill: #686868;
+}
+.item__delete svg polygon:focus {
+  fill: #cecece;
+}
+.item__delete svg polygon:hover {
+  fill: #cecece;
+}
+.rules {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+.footer {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.footer__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.footer__item {
+  margin-right: 20px;
+}
+.footer__item a {
+  color: #686868;
+  border: none;
+  font-size: 15px;
+}
+.github-link {
+  background-color: inherit;
+  background-image: url("../../img/icon-github-1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=style.css.map */

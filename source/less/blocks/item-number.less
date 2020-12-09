@@ -1,11 +1,22 @@
 .item-number {
+  position: relative;
   font-size: 15px;
-  height: 30px;
-  width: 30px;
-  left: 15px;
+  color: rgb(246, 246, 246);
+  font-weight: bold;
   z-index: 2;
-  border-radius: 50%;
-  position: absolute;
-  color: @base-grey;
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: #0077b3;
+    width: 30px;
+    height: 30px;
+    left: -10px;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+  }
 }

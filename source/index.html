@@ -9,7 +9,7 @@
   <title>To do list</title>
 </head>
 
-<body class="page-body">
+<body class="page-body page-container">
   <section class="menu">
     <span class="menu-decor"></span>
     <ul class="menu__list visually-hidden">
@@ -60,30 +60,6 @@
             </svg>
           </button>
         </li>
-        <li class="tasks__item">
-          <span class="item-number">4</span>
-          <input class="item-input" type="text" placeholder="готовка ужина">
-          <button type="button" class="button item__delete" area-label="Удалить пункт">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
-              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-              <polygon
-                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
-            </svg>
-          </button>
-        </li>
-        <li class="tasks__item">
-          <span class="item-number">5</span>
-          <input class="item-input" type="text" placeholder="готовка ужина">
-          <button type="button" class="button item__delete" area-label="Удалить пункт">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
-              viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-              <polygon
-                points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
-            </svg>
-          </button>
-        </li>
       </ul>
       <div class="controls-wrapper">
         <button type="button" class="button buttons__add">Добавить пункт</button>
@@ -103,12 +79,22 @@
   </footer>
 
   <template id="task">
-    <span class="item-number"></span>
-    <input type="text" placeholder="доделать задание на js">
-    <button type="button" class="item__delete" area-label="Удалить пункт"></button>
+    <span class="item-number">1</span>
+    <input class="item-input" type="text" placeholder="готовка ужина">
+    <button type="button" class="button item__delete" area-label="Удалить пункт">
+      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" width="15px" height="15px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199"
+        xml:space="preserve">
+        <polygon
+          points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+      </svg>
+    </button>
   </template>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/move-task.js"></script>
+  <script src="js/add-task.js"></script>
+  <script src="js/remove-task.js"></script>
+  <script src="js/clear-all-tasks.js"></script>
 </body>
 
 </html>

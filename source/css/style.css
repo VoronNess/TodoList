@@ -21,24 +21,48 @@
   margin: 0;
   padding: 0;
 }
+@media (min-width: 768px) {
+  .page-container {
+    margin: auto;
+  }
+}
+@media (min-width: 1000px) {
+  .page-container {
+    width: 760px;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
 .item-number {
+  position: relative;
   font-size: 15px;
-  height: 30px;
-  width: 30px;
-  left: 15px;
+  color: #f6f6f6;
+  font-weight: bold;
   z-index: 2;
-  border-radius: 50%;
+}
+.item-number::after {
   position: absolute;
-  color: #686868;
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+  content: "";
+  border-radius: 50%;
+  background-color: #0077b3;
+  width: 30px;
+  height: 30px;
+  left: -10px;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .item-number {
+    margin: auto;
+  }
 }
 .menu {
   position: relative;
 }
 .menu-decor {
   width: 40px;
-  height: 60px;
-  background-color: #0077b3;
+  height: 45px;
+  background-image: url("../../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: top;
   position: absolute;
   right: 20px;
   top: 0;
@@ -80,9 +104,37 @@
   position: absolute;
   background-color: #686868;
   height: 1px;
-  width: 280px;
+  width: 88%;
   bottom: 110px;
   left: 20px;
+}
+@media (min-width: 768px) {
+  .tasks::after {
+    margin: auto;
+    left: 40px;
+    width: 90%;
+  }
+}
+.tasks__title {
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.tasks__title::after {
+  content: "";
+  position: absolute;
+  background-color: #686868;
+  height: 1px;
+  width: 94%;
+  top: 50px;
+  left: 10px;
+}
+@media (min-width: 768px) {
+  .tasks__title::after {
+    left: 40px;
+    width: 92%;
+  }
 }
 .tasks__wrapper {
   margin: auto;
@@ -100,21 +152,6 @@
   border-radius: 10px;
   cursor: move;
   background-color: none;
-}
-.tasks__title {
-  position: relative;
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
-.tasks__title::after {
-  content: "";
-  position: absolute;
-  background-color: #686868;
-  height: 1px;
-  width: 280px;
-  top: 50px;
-  left: 10px;
 }
 .controls-wrapper {
   background-color: inherit;
@@ -134,6 +171,11 @@
   margin-left: 30px;
   border: none;
   border-bottom: 1px dotted #686868;
+}
+@media (min-width: 768px) {
+  .item-input {
+    width: 300px;
+  }
 }
 .item__delete {
   background-color: inherit;

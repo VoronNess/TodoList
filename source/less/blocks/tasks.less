@@ -10,9 +10,37 @@
     position: absolute;
     background-color: @base-grey;
     height: 1px;
-    width: 280px;
+    width: 88%;
     bottom: 110px;
     left: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin: auto;
+      left: 40px;
+      width: 90%;
+    }
+  }
+}
+
+.tasks__title {
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @base-grey;
+    height: 1px;
+    width: 94%;
+    top: 50px;
+    left: 10px;
+
+    @media (min-width: @tablet-width) {
+      left: 40px;
+      width: 92%;
+    }
   }
 }
 
@@ -34,21 +62,4 @@
   border-radius: 10px;
   cursor: move;
   background-color: none;
-}
-
-.tasks__title {
-  position: relative;
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 40px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: @base-grey;
-    height: 1px;
-    width: 280px;
-    top: 50px;
-    left: 10px;
-  }
 }

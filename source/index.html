@@ -77,6 +77,44 @@
       </li>
     </ul>
   </footer>
+  <section class="help">
+    <h2 class="help__title">Как пользоваться To do List?</h2>
+    <div class="help-slider slider">
+      <div class="slider__controls">
+        <button class="button-close" aria-label="Закрыть"></button>
+        <div class="slider__controls-arrows">
+          <button class="slider__controls-arrows--previous" aria-label="Назад"></button>
+          <button class="slider__controls-arrows--next" aria-label="Дальше"></button>
+        </div>
+        <div class="slider__controls--dots">
+          <button class="dot dot__current" aria-label="Первый слайд"></button>
+          <button class="dot" aria-label="Второй слайд"></button>
+          <button class="dot" aria-label="Третий слайд"></button>
+          <button class="dot" aria-label="Четвертый слайд"></button>
+        </div>
+      </div>
+      <ul class="slider__slides">
+        <li class="slide slide__current">
+          <h3 class="slide__title">Новый пункт списка</h3>
+          <p class="slide__text">Чтобы добавить новый пункт в список дел, нажмите на кнопку "Добавить пункт"</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Удаление пунката списка</h3>
+          <p class="slide__text">Чтобы удалить один пункт списка дел, нажмите на крестик справа</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Удалить список дел</h3>
+          <p class="slide__text">Чтобы удалить весь список дел, нажмите на кнопку "Очистить весь список"
+          </p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Советы по применению</h3>
+          <p class="slide__text">Чтобы вспомнить как пользоваться To do list, нажмите на иконку вопрос
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <template id="task">
     <span class="item-number">1</span>
@@ -90,7 +128,7 @@
       </svg>
     </button>
   </template>
-
+  <script src="js/help.js"></script>
   <script src="js/move-task.js"></script>
   <script src="js/add-task.js"></script>
   <script src="js/remove-task.js"></script>

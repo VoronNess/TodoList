@@ -192,13 +192,84 @@
 .item__delete svg polygon:hover {
   fill: #cecece;
 }
-.rules {
-  border: none;
+.help {
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 15px;
+  background-color: rgba(104, 104, 104, 0.5);
+  z-index: 3;
+  height: 100%;
+}
+.help__title {
+  padding: 0 10px;
+  margin-top: 50px;
+}
+.slider {
+  position: relative;
+}
+.slider__slides {
+  list-style: none;
+  padding: 0 30px;
+}
+.slider__controls-arrows {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  top: 60px;
+  right: 0;
+  justify-content: space-between;
+}
+.slider__controls-arrows--previous {
+  width: 22px;
+  height: 40px;
+  background-image: url("../../img/icon-previous-arrow.svg");
   background-color: transparent;
+  border: none;
   cursor: pointer;
+  z-index: 2;
+}
+.slider__controls-arrows--next {
+  width: 22px;
+  height: 40px;
+  background-image: url("../../img/icon-next-arrow.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.slider__controls--dots {
+  position: absolute;
+  top: 125px;
+  left: 125px;
+}
+.slider__controls--dots .dot {
+  padding: 0;
+  background-color: #686868;
+  border: 2px solid #686868;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+.slider__controls--dots .dot__current {
+  background-color: #353535;
+}
+.slide {
+  display: none;
+  margin-bottom: 40px;
+}
+.slide__current {
+  display: block;
+}
+.button-close {
+  position: absolute;
+  top: -110px;
+  right: 0;
+  border: none;
+  background-color: inherit;
+  background-image: url("../../img/icon-cross.svg");
   background-repeat: no-repeat;
-  height: 20px;
-  width: 20px;
+  background-position: center;
+  height: 18px;
+  width: 18px;
 }
 .footer {
   margin: 0;

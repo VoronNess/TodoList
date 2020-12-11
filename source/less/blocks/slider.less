@@ -1,0 +1,65 @@
+.slider {
+  position: relative;
+}
+
+.slider__slides {
+  list-style: none;
+  padding: 0 30px;
+}
+
+.slider__controls-arrows {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  top: 60px;
+  right: 0;
+  justify-content: space-between;
+}
+
+.slider__controls-arrows--previous {
+  width: 22px;
+  height: 40px;
+  background-image: url("../../img/icon-previous-arrow.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider__controls-arrows--next {
+  width: 22px;
+  height: 40px;
+  background-image: url("../../img/icon-next-arrow.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__controls--dots {
+  position: absolute;
+  top: 125px;
+  left: 125px;
+
+  & .dot {
+    padding: 0;
+    background-color: @base-grey;
+
+    border: 2px solid @base-grey;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+  }
+
+  .dot__current {
+    background-color: darken(@base-grey, 20%);
+  }
+}
+
+.slide {
+  display: none;
+  margin-bottom: 40px;
+}
+
+.slide__current {
+  display: block;
+}

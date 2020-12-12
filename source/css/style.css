@@ -62,10 +62,10 @@
   height: 45px;
   background-image: url("../../img/icon-bookmark.svg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-size: contain;
   position: absolute;
   right: 20px;
-  top: 0;
+  top: -2px;
   z-index: 2;
 }
 .visually-hidden {
@@ -235,6 +235,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 2;
 }
 .slider__controls--dots {
   position: absolute;
@@ -253,8 +254,10 @@
   background-color: #353535;
 }
 .slide {
-  display: none;
+  list-style: none;
   margin-bottom: 40px;
+  position: absolute;
+  display: none;
 }
 .slide__current {
   display: block;
@@ -267,7 +270,7 @@
   background-color: inherit;
   background-image: url("../../img/icon-cross.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: contain;
   height: 18px;
   width: 18px;
 }
@@ -294,7 +297,7 @@
 .github-link {
   background-color: inherit;
   background-image: url("../../img/icon-github-1.svg");
-  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;

@@ -33,6 +33,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 2;
 }
 
 .slider__controls--dots {
@@ -56,8 +57,10 @@
 }
 
 .slide {
-  display: none;
+  list-style: none;
   margin-bottom: 40px;
+  position: absolute;
+  display: none;
 }
 
 .slide__current {

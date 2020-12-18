@@ -12,21 +12,19 @@
 <body class="page-body page-container">
   <section class="menu">
     <span class="menu-decor"></span>
-    <ul class="menu__list visually-hidden">
-      <li class="menu__item">
-        <a class="rules">
-          <span class="visually-hidden">Как пользоваться To do List</span>
-        </a>
-      </li>
-    </ul>
   </section>
   <section class="tasks">
     <h2 class="tasks__title">To do list</h2>
     <div class="tasks__wrapper">
       <ul class="tasks__list">
-        <li class="tasks__item">
-          <span class="item-number">1</span>
-          <input class="item-input" type="text" placeholder="готовка ужина">
+        <li class="tasks__item item">
+          <span class="item-number" value="1">1</span>
+          <input class="item-input" type="text" placeholder="заехать за посылкой">
+          <button type="button" class="item-done">
+            <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.28505 6.48598L0.456055 9.31497L8.23905 17.098L22.1711 3.16598L19.3431 0.336975L8.23905 11.439L3.28505 6.48598Z" fill="#C5C5C5"/>
+            </svg>
+          </button>
           <button type="button" class="button item__delete" area-label="Удалить пункт">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
@@ -37,8 +35,13 @@
           </button>
         </li>
         <li class="tasks__item">
-          <span class="item-number">2</span>
-          <input class="item-input" type="text" placeholder="доделать задание на js">
+          <span class="item-number" value="2">2</span>
+          <input class="item-input" type="text" placeholder="приготовить ужин">
+          <button type="button" class="item-done">
+            <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.28505 6.48598L0.456055 9.31497L8.23905 17.098L22.1711 3.16598L19.3431 0.336975L8.23905 11.439L3.28505 6.48598Z" fill="#C5C5C5"/>
+            </svg>
+          </button>
           <button type="button" class="button item__delete" area-label="Удалить пункт">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
@@ -49,8 +52,13 @@
           </button>
         </li>
         <li class="tasks__item">
-          <span class="item-number">3</span>
-          <input class="item-input" type="text" placeholder="прогука с собакой">
+          <span class="item-number" value="3">3</span>
+          <input class="item-input item-finished" type="text" placeholder="погулять с собакой">
+          <button type="button" class="item-done">
+            <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.28505 6.48598L0.456055 9.31497L8.23905 17.098L22.1711 3.16598L19.3431 0.336975L8.23905 11.439L3.28505 6.48598Z" fill="#C5C5C5"/>
+            </svg>
+          </button>
           <button type="button" class="button item__delete" area-label="Удалить пункт">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px"
@@ -62,8 +70,8 @@
         </li>
       </ul>
       <div class="controls-wrapper">
-        <button type="button" class="button buttons__add">Добавить пункт</button>
-        <button type="button" class="button buttons__clear-all">Очистить весь список</button>
+        <button type="button" class="button button__add">Добавить пункт</button>
+        <button type="button" class="button button__clear-all">Очистить весь список</button>
       </div>
     </div>
   </section>
@@ -71,17 +79,18 @@
   <footer class="footer">
     <ul class="footer__list">
       <li class="footer__item github-link">
-        <a href="https://github.com/VoronNess/TodoList" aria-label=" Репозиторий проекта">
-
-        </a>
+        <a href="https://github.com/VoronNess/TodoList" aria-label="Репозиторий проекта">..</a>
+      </li>
+      <li>
+        <button class="footer__item button how-use" type="button" aria-label="как пользоваться To do list"></button>
       </li>
     </ul>
   </footer>
   <section class="help">
     <h2 class="help__title">Как пользоваться To do List?</h2>
+    <button class="button-close" aria-label="Закрыть"></button>
     <div class="help-slider slider">
       <div class="slider__controls">
-        <button class="button-close" aria-label="Закрыть"></button>
         <div class="slider__controls-arrows">
           <button class="slider__controls-arrows--previous" aria-label="Назад"></button>
           <button class="slider__controls-arrows--next" aria-label="Дальше"></button>
@@ -92,6 +101,7 @@
           <button class="dot" aria-label="Третий слайд"></button>
           <button class="dot" aria-label="Четвертый слайд"></button>
           <button class="dot" aria-label="Пятый слайд"></button>
+          <button class="dot" aria-label="Шестой слайд"></button>
         </div>
       </div>
       <ul class="slider__list">
@@ -102,6 +112,10 @@
         <li class="slide">
           <h3 class="slide__title">Перетаскивание пункта</h3>
           <p class="slide__text">Чтобы переместить пункт выше или ниже, зажмите нужный пункт левой кнопкой мыши</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Отметить выполненый пункт</h3>
+          <p class="slide__text">Чтобы зачеркнуть выполненый пункт в списке дел, нажмите на кнопку-галочку</p>
         </li>
         <li class="slide">
           <h3 class="slide__title">Удаление пункта списка</h3>
@@ -124,6 +138,11 @@
   <template id="task">
     <span class="item-number">1</span>
     <input class="item-input" type="text" placeholder="готовка ужина">
+    <button type="button" class="item-done">
+      <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.28505 6.48598L0.456055 9.31497L8.23905 17.098L22.1711 3.16598L19.3431 0.336975L8.23905 11.439L3.28505 6.48598Z" fill="#C5C5C5"/>
+      </svg>
+    </button>
     <button type="button" class="button item__delete" area-label="Удалить пункт">
       <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" width="15px" height="15px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199"
@@ -134,6 +153,7 @@
     </button>
   </template>
   <script src="js/help.js"></script>
+  <script src="js/done-task.js"></script>
   <script src="js/move-task.js"></script>
   <script src="js/add-task.js"></script>
   <script src="js/remove-task.js"></script>

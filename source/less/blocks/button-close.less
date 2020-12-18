@@ -1,12 +1,28 @@
 .button-close {
   position: absolute;
-  top: -110px;
-  right: 0;
+  top: 10px;
+  right: 10px;
   border: none;
-  background-color: inherit;
+  background-color: transparent;
   background-image: url("../../img/icon-cross.svg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 18px;
   width: 18px;
+  z-index: 2;
+  outline: none;
+
+  &:active {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:active:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
 }

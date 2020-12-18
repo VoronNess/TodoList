@@ -1,5 +1,5 @@
 (function () {
-	const clearAllTasksButton = document.querySelector('.buttons__clear-all');
+	const clearAllTasksButton = document.querySelector('.button__clear-all');
 	const tasksList = document.querySelector('.tasks__list');
 
 	const clearAllTasks = () => {

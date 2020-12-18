@@ -2,8 +2,7 @@
 (function () {
 	const slidesList = document.querySelector('.slider__list');
 	const liveSlides = slidesList.children;
-	const dotsList = document.querySelector('.slider__controls--dots');
-	const liveDots = dotsList.children;
+	const dots = document.querySelectorAll('.dot');
 
 	let currentSlide = 0;
 
@@ -18,10 +17,10 @@
 	};
 
 	const showCurrentDot = (i) => {
-		for (const dot of liveDots) {
+		for (const dot of dots) {
 			dot.classList.remove('dot__current');
 		}
-		liveDots[i].classList.add('dot__current');
+		dots[i].classList.add('dot__current');
 	};
 
 	const showPreviousSlide = () => {
@@ -48,11 +47,28 @@
 		}
 	};
 
+	dots.forEach((item, indexDot) => {
+		item.addEventListener('click', () => {
+			currentSlide = indexDot;
+			showCurrentSlide(currentSlide);
+			showCurrentDot(currentSlide);
+		});
+	});
+
 	buttonPrevious.addEventListener('click', showPreviousSlide);
 	buttonNext.addEventListener('click', showNextSlide);
 
+	// Open help
+	const helpNotice = document.querySelector('.help');
+	const helpButton = document.querySelector('.how-use');
+
+	const openHelp = () => {
+		helpButton.addEventListener('click', () => {
+			helpNotice.style.display = 'block';
+		});
+	};
+	openHelp();
 	// Close Help
-	const helpNotice = document.querySelector('.help');
 	const closeHelpButton = helpNotice.querySelector('.button-close');
 
 	const closeHelp = () => {
@@ -62,38 +78,3 @@
 	};
 	closeHelp();
 }());
-/*
-	const slidesList = document.querySelector('.slider__list');
-	const liveSlides = slidesList.children;
-	let currentSlide = 0;
-
-	const slider = () => {
-		for (let i = 0; i < liveSlides.length; i++) {
-			liveSlides[i].style.opacity = '0';
-		}
-		liveSlides[currentSlide].style.opacity = '1';
-
-		if (currentSlide === liveSlides.length - 1) {
-			currentSlide = 0;
-		} else {
-			currentSlide++;
-		}
-
-		return currentSlide;
-	};
-
-	slidesList.addEventListener('click', () => {
-		slider();
-	});
-
-	const helpNotice = document.querySelector('.help');
-	const closeHelpButton = helpNotice.querySelector('.button-close');
-
-	const closeHelp = () => {
-		closeHelpButton.addEventListener('click', () => {
-			helpNotice.style.display = 'none';
-		});
-	};
-	closeHelp();
-}());
-*/

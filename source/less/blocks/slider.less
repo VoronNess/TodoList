@@ -2,57 +2,103 @@
   position: relative;
 }
 
-.slider__slides {
+.slider__list {
   list-style: none;
-  padding: 0 30px;
+  padding: 0;
+  position: relative;
+}
+
+.slider__controls {
+  position: relative;
 }
 
 .slider__controls-arrows {
   position: absolute;
   display: flex;
-  width: 300px;
-  top: 60px;
-  right: 0;
+  box-sizing: border-box;
+  width: 100%;
+  top: 75px;
+  padding: 0 5px;
   justify-content: space-between;
 }
 
 .slider__controls-arrows--previous {
   width: 22px;
-  height: 40px;
+  height: 30px;
+  padding: 0;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../../img/icon-previous-arrow.svg");
   background-color: transparent;
   border: none;
   cursor: pointer;
   z-index: 2;
+
+  &:active {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 .slider__controls-arrows--next {
   width: 22px;
-  height: 40px;
+  height: 30px;
+  padding: 0;
+  right: 0;
   background-image: url("../../img/icon-next-arrow.svg");
   background-color: transparent;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
   cursor: pointer;
   z-index: 2;
+
+  &:active {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 .slider__controls--dots {
   position: absolute;
-  top: 125px;
-  left: 125px;
+  width: 100%;
+  bottom: -160px;
 
   & .dot {
     padding: 0;
-    background-color: @base-grey;
+    background-color: inherit;
 
     border: 2px solid @base-grey;
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
+  }
+
+  & .dot:active {
+    outline: none;
   }
 
   .dot__current {
-    background-color: darken(@base-grey, 20%);
+    background-color: @base-grey;
+    outline: none;
   }
 }
 
@@ -65,4 +111,20 @@
 
 .slide__current {
   display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.slide__text {
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 200px;
+  }
 }

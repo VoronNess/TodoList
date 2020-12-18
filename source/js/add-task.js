@@ -1,6 +1,6 @@
 (function () {
 	const tasksConteiner = document.querySelector('.controls-wrapper');
-	const addTask = tasksConteiner.querySelector('.buttons__add');
+	const addTask = tasksConteiner.querySelector('.button__add');
 	const taskTemplate = document.querySelector('#task')
 		.content;
 
@@ -26,7 +26,8 @@
 		newTaskWrapper.appendChild(taskElement);
 		tasksList.appendChild(newTaskWrapper);
 
-		window.remove.removeTask();// чтобы каждый новый добавленный элемент тоже можно было удалить
+		window.finished.finishedTask();// чтобы на каждый новый добавленный элемент тоже действовало
+		window.remove.removeTask();
 	};
 
 	addTask.addEventListener('click', (evt) => {

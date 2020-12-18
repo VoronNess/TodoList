@@ -4,15 +4,23 @@
   width: 20px;
   border: none;
 
+  &:active {
+    outline: none;
+  }
+
+  &:active:focus {
+    outline: none;
+  }
+
   & svg polygon {
-    fill: @base-grey;
+    fill: @base-light-grey;
   }
 
   & svg polygon:focus {
-    fill: lighten(@base-grey, 40%);
+    fill: @base-grey;
   }
 
   & svg polygon:hover {
-    fill: lighten(@base-grey, 40%);
+    fill: @base-grey;
   }
 }

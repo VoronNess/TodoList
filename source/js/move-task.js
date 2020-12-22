@@ -22,6 +22,7 @@
 
 	tasksListElement.addEventListener('dragend', (evt) => {
 		evt.target.classList.remove('selected');
+		window.number.setTaskNumber();
 	});
 
 	tasksListElement.addEventListener('dragover', (evt) => {

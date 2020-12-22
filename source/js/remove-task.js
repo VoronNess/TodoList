@@ -5,7 +5,11 @@
 		// eslint-disable-next-line no-restricted-syntax
 		for (const taskDeleteButton of taskDeleteButtons) {
 			taskDeleteButton.addEventListener('click', () => {
+				const taskFinishButtons = document.getElementsByClassName('item__finish');
+
+				window.finished.finishedTask(taskFinishButtons);
 				taskDeleteButton.parentElement.remove();
+				window.number.setTaskNumber();
 			});
 		}
 	};

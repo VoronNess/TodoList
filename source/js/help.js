@@ -60,7 +60,7 @@
 
 	// Open help
 	const helpNotice = document.querySelector('.help');
-	const helpButton = document.querySelector('.how-use');
+	const helpButton = document.querySelector('.help__activate-button');
 
 	const openHelp = () => {
 		helpButton.addEventListener('click', () => {
@@ -68,8 +68,9 @@
 		});
 	};
 	openHelp();
+
 	// Close Help
-	const closeHelpButton = helpNotice.querySelector('.button-close');
+	const closeHelpButton = helpNotice.querySelector('.button__close');
 
 	const closeHelp = () => {
 		closeHelpButton.addEventListener('click', () => {

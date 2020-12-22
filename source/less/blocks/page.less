@@ -9,3 +9,23 @@
   margin: 0;
   padding: 0;
 }
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+}
+
+.page__container {
+  @media (min-width: @tablet-width) {
+    margin: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 760px;
+    box-shadow: @page-shadow;
+  }
+}

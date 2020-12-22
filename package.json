@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "To Do list",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2"
+  },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
     "browser-sync": "^2.26.13",

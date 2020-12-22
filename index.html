@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="source/css/styles.min.css">
+  <link rel="preload" href="source/fonts/ptsans.woff2" as="font" crossorigin>
+  <title>To do list</title>
+</head>
+
+<body class="page__body page__container">
+  <svg style="display: none;">
+    <symbol id="icon-delete" viewBox="0 0 22.199 22.199" >
+      <polygon
+    points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+    </symbol>
+  </svg>
+  <header class="main-header">
+    <span class="main-header__bookmark"></span>
+  </header>
+  <section class="tasks">
+    <h2 class="tasks__title">To do list</h2>
+    <div class="tasks__wrapper">
+      <ul class="tasks__list">
+        <li class="tasks__item item">
+          <span class="item__number">1</span>
+          <input class="item__input" type="text" placeholder="заехать за посылкой" id="1">
+          <label class="item__finish" for="1">&nbsp;</label>
+          <button type="button" class="button item__delete" aria-label="удалить пункт">
+            <svg width="15px" height="15px">
+              <use xlink:href="#icon-delete"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item item">
+          <span class="item__number">2</span>
+          <input class="item__input" type="text" placeholder="приготовить ужин" id="2">
+          <label class="item__finish" for="2">&nbsp;</label>
+          <button type="button" class="button item__delete" aria-label="удалить пункт">
+            <svg width="15px" height="15px">
+              <use xlink:href="#icon-delete"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="tasks__item item">
+          <span class="item__number">3</span>
+          <input class="item__input" type="text" placeholder="погулять с собакой" id="3">
+          <label class="item__finish" for="3">&nbsp;</label>
+          <button type="button" class="button item__delete" aria-label="удалить пункт">
+            <svg width="15px" height="15px">
+              <use xlink:href="#icon-delete"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <div class="tasks__controls-wrapper">
+        <button type="button" class="button button__add">Добавить пункт</button>
+        <button type="button" class="button button__clear-all">Очистить весь список</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item footer__github-link">
+        <a href="https://github.com/VoronNess/TodoList" aria-label="Репозиторий проекта">..</a>
+      </li>
+      <li>
+        <button class="footer__item button help__activate-button" type="button" aria-label="как пользоваться To do list"></button>
+      </li>
+    </ul>
+  </footer>
+  <section class="help">
+    <h2 class="help__title">Как пользоваться To do List?</h2>
+    <button class="button__close" aria-label="Закрыть"></button>
+    <div class="slider">
+      <div class="slider__controls">
+        <div class="slider__controls-arrows">
+          <button class="slider__controls-arrows--previous" aria-label="Назад"></button>
+          <button class="slider__controls-arrows--next" aria-label="Дальше"></button>
+        </div>
+        <div class="slider__controls-dots">
+          <button class="dot dot__current" aria-label="Первый слайд"></button>
+          <button class="dot" aria-label="Второй слайд"></button>
+          <button class="dot" aria-label="Третий слайд"></button>
+          <button class="dot" aria-label="Четвертый слайд"></button>
+          <button class="dot" aria-label="Пятый слайд"></button>
+          <button class="dot" aria-label="Шестой слайд"></button>
+        </div>
+      </div>
+      <ul class="slider__list">
+        <li class="slide slide__current">
+          <h3 class="slide__title">Новый пункт списка</h3>
+          <p class="slide__text">Чтобы добавить новый пункт в список дел, нажмите на кнопку "Добавить пункт"</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Перетаскивание пункта</h3>
+          <p class="slide__text">Чтобы переместить пункт выше или ниже, зажмите нужный пункт левой кнопкой мыши</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Отметить выполненый пункт</h3>
+          <p class="slide__text">Чтобы зачеркнуть выполненый пункт в списке дел, нажмите на кнопку-галочку</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Удаление пункта списка</h3>
+          <p class="slide__text">Чтобы удалить один пункт списка дел, нажмите на крестик справа</p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Удалить список дел</h3>
+          <p class="slide__text">Чтобы удалить весь список дел, нажмите на кнопку "Очистить весь список"
+          </p>
+        </li>
+        <li class="slide">
+          <h3 class="slide__title">Советы по применению</h3>
+          <p class="slide__text">Чтобы вспомнить как пользоваться To do list, нажмите на иконку вопрос
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <template id="task">
+    <span class="item__number">1</span>
+    <input class="item__input" type="text" placeholder="готовка ужина">
+    <label class="item__finish">&nbsp;</label>
+    <button type="button" class="button item__delete" aria-label="удалить пункт">
+      <svg width="15px" height="15px">
+        <use xlink:href="#icon-delete"></use>
+      </svg>
+    </button>
+  </template>
+  <script src="source/js/help.js"></script>
+  <script src="source/js/change-number-task.js"></script>
+  <script src="source/js/finish-task.js"></script>
+  <script src="source/js/move-task.js"></script>
+  <script src="source/js/add-task.js"></script>
+  <script src="source/js/remove-task.js"></script>
+  <script src="source/js/clear-all-tasks.js"></script>
+
+</body>
+
+</html>

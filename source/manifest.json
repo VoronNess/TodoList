@@ -1,0 +1,31 @@
+{
+  "name": "Список Дел To Do List",
+  "short_name": "ToDoList",
+  "start_url": "index.html",
+
+  "background_color": "#9ECCE8",
+  "theme_color": "#9ECCE8",
+  "description": "Планер для списока дел - To Do List",
+  "display": "fullscreen",
+  "orientation":"portrait-primary",
+
+  "icons": [
+    {
+      "src": "img/logo-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-icon-mask.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+
+}

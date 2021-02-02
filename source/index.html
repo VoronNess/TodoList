@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+  <meta name="description" content="Списки дел - просто, легко, удобно">
+  <link href="css/styles.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" type="image/icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0077b3">
   <title>To do list</title>
 </head>
 
 <body class="page__body page__container">
   <svg style="display: none;">
-    <symbol id="icon-delete" viewBox="0 0 22.199 22.199" >
+    <symbol id="icon-delete" viewBox="0 0 22.199 22.199">
       <polygon
-    points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+        points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
     </symbol>
   </svg>
   <header class="main-header">
@@ -25,7 +32,8 @@
       <ul class="tasks__list">
         <li class="tasks__item item">
           <span class="item__number">1</span>
-          <input class="item__input" type="text" placeholder="заехать за посылкой" id="1">
+          <input aria-label="поле для ввоа списка дел" class="item__input" type="text" placeholder="заехать за посылкой"
+            id="1">
           <label class="item__finish" for="1">&nbsp;</label>
           <button type="button" class="button item__delete" aria-label="удалить пункт">
             <svg width="15px" height="15px">
@@ -35,7 +43,8 @@
         </li>
         <li class="tasks__item item">
           <span class="item__number">2</span>
-          <input class="item__input" type="text" placeholder="приготовить ужин" id="2">
+          <input aria-label="поле для ввоа списка дел" class="item__input" type="text" placeholder="приготовить ужин"
+            id="2">
           <label class="item__finish" for="2">&nbsp;</label>
           <button type="button" class="button item__delete" aria-label="удалить пункт">
             <svg width="15px" height="15px">
@@ -45,7 +54,8 @@
         </li>
         <li class="tasks__item item">
           <span class="item__number">3</span>
-          <input class="item__input" type="text" placeholder="погулять с собакой" id="3">
+          <input aria-label="поле для ввоа списка дел" class="item__input" type="text" placeholder="погулять с собакой"
+            id="3">
           <label class="item__finish" for="3">&nbsp;</label>
           <button type="button" class="button item__delete" aria-label="удалить пункт">
             <svg width="15px" height="15px">
@@ -67,7 +77,8 @@
         <a href="https://github.com/VoronNess/TodoList" aria-label="Репозиторий проекта">..</a>
       </li>
       <li>
-        <button class="footer__item button help__activate-button" type="button" aria-label="как пользоваться To do list"></button>
+        <button class="footer__item button help__activate-button" type="button"
+          aria-label="как пользоваться To do list"></button>
       </li>
     </ul>
   </footer>
@@ -122,7 +133,7 @@
 
   <template id="task">
     <span class="item__number">1</span>
-    <input class="item__input" type="text" placeholder="готовка ужина">
+    <input aria-label="поле для ввоа списка дел" class="item__input" type="text" placeholder="готовка ужина">
     <label class="item__finish">&nbsp;</label>
     <button type="button" class="button item__delete" aria-label="удалить пункт">
       <svg width="15px" height="15px">
